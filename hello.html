@@ -6,5 +6,33 @@
   </head>
   <body>
     Hello world hello again hello again!
+<head>
+	<script type="text/javascript">
+		function formValidatio() {
+		var name=document.detailsForm.username.value;
+		var password=document.detailsForm.userpassword.value;
+
+		if (name==null || name=="") {
+			alert("You Must enter Your name!") ;
+
+			return false;
+
+		}else if(password.lenght<8) {
+			alert("You Must Enter password with 8 characters  and above1") ;
+			return false;
+			
+		}
+
+		}
+	</script>
+</head>
+<body>
+<f
+form name="detailsForm" method="POST"
+action="nm.jsp" onsubmit="return formValidation()" > 
+Name: <input type="text" name="username"><br/>
+Password: <input type="Password" name="userpassword"><br/>
+<input type="submit" value="Login">
+</form>
   </body>
 </html>
